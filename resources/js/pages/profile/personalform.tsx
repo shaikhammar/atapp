@@ -9,15 +9,15 @@ import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { countries } from '@/lib/countries';
 import { cn } from '@/lib/utils';
-import { Currency, Language, Profile, SharedData } from '@/types';
-import { useForm, usePage } from '@inertiajs/react';
+import { Currency, Language, Profile } from '@/types';
+import { useForm } from '@inertiajs/react';
 import { eachYearOfInterval, endOfYear, format, startOfYear } from 'date-fns';
 import { CalendarIcon, Check, ChevronsUpDown } from 'lucide-react';
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import { CaptionLabelProps, MonthGridProps } from 'react-day-picker';
 
 function PersonalForm({ profile, currencies, languages }: { profile: Profile; currencies: Currency[]; languages: Language[] }) {
-    const { auth } = usePage<SharedData>().props;
+    // const { auth } = usePage<SharedData>().props;
 
     const languageOptions: Option[] = languages.map((language) => ({
         value: String(language.id), // convert to string if needed
@@ -67,10 +67,10 @@ function PersonalForm({ profile, currencies, languages }: { profile: Profile; cu
         },
         // additional_fields: auth.user.add_info ? auth.user.add_info.additional_fields : [],
     });
-    const MAX_FIELDS = 6;
+    // const MAX_FIELDS = 6;
 
-    const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
-    const [shouldFocus, setShouldFocus] = useState(false);
+    // const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
+    // const [shouldFocus, setShouldFocus] = useState(false);
 
     // useLayoutEffect(() => {
     //     if (shouldFocus && inputRefs.current.length > 0) {

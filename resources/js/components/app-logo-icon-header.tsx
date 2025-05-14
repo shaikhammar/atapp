@@ -1,6 +1,4 @@
-import { SVGAttributes } from 'react';
-
-export default function AppLogoIconHeader(props: SVGAttributes<SVGElement>) {
+export default function AppLogoIconHeader() {
     return (
         <svg width="200px" height="80px" version="1.1" viewBox="0 0 340.16 84.074" xmlns="http://www.w3.org/2000/svg">
             <defs>
